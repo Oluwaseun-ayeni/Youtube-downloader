@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
-node_modules/
+frontend/down-app/node_modules
+
