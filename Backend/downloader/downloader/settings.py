@@ -38,7 +38,8 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["3.84.4.20"]
+ALLOWED_HOSTS =  ['127.0.0.1', '172.31.90.217']
+
 
 
 # Application definition
@@ -115,7 +116,7 @@ DATABASES = {
         'NAME': env("DB_NAME"),
         'USER': env("DB_USER"),
         'PASSWORD': env("DB_PASSWORD"),
-        'HOST': "3.84.4.20",
+        'HOST': "54.208.60.152",
         'PORT': "",
     }
     
