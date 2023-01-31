@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/down-app/package.json",
+        "use": "@vercel/npm",
+        "config": {
+          "command": "npm run build"
+        }
+      },
+      {
+        "src": "backend/downloader/requirements.txt",
+        "use": "@vercel/python",
+        "config": {
+          "command": "python manage.py runserver"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "frontend/down-app/public/$1"
+      },
+      {
+        "src": "/api/(.*)",
+        "dest": "backend/downloader/manage.py runserver --nopin"
+      }
+    ]
+  }
+  
