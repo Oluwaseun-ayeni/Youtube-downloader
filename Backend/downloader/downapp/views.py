@@ -41,8 +41,11 @@ class DownloadView(APIView):
                 response = HttpResponse(fp.read(), content_type='video/mp4')
                 response['Content-Disposition'] = 'attachment; filename=' + stream.default_filename
                 return response
+                
+                
         except Exception as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        
 
 
 

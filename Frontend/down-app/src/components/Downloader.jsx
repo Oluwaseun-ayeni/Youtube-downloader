@@ -18,7 +18,7 @@ function YouTubeDownloader() {
     event.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/download/', {
+      const response = await fetch('http://127.0.0.1:8000/api/download/', {
         method: 'POST',
         body: JSON.stringify({ url, videoQuality }),
         headers: { 'Content-Type': 'application/json' },
